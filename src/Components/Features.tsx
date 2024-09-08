@@ -1,6 +1,9 @@
 import  { useState } from "react";
 import FeatureBox from "./FeatureBox";
-
+import img1 from "../assets/icon-access-anywhere.svg"
+import img2 from "../assets/icon-security.svg"
+import img3 from "../assets/icon-collaboration.svg"
+import img4 from "../assets/icon-any-file.svg"
 interface FeatureItem {
   icon: string;
   title: string;
@@ -10,22 +13,22 @@ interface FeatureItem {
 function Features() {
   const [items] = useState<FeatureItem[]>([
     {
-      icon: "icon-access-anywhere.svg",
+      icon:` ${img1}`,
       title: "Access your files, anywhere",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maiores, dolor velit debitis delectus distinctio!",
     },
     {
-      icon: "icon-security.svg",
+      icon:` ${img2}`,
       title: "Security you can trust",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maiores, dolor velit debitis delectus distinctio!",
     },
     {
-      icon: "icon-collaboration.svg",
+      icon:` ${img3}`,
       title: "Real-time collaboration",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maiores, dolor velit debitis delectus distinctio!",
     },
     {
-      icon: "icon-any-file.svg",
+      icon:` ${img4}`,
       title: "Store any type of file",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maiores, dolor velit debitis delectus distinctio!",
     },

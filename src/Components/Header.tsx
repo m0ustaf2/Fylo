@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
+import logo from "../assets/logo.svg"
 export default function Header() {
   const [links] = useState<string[]>(["Features", "Team", "SignIn"]);
 
@@ -31,7 +31,7 @@ export default function Header() {
     >
       <div className="container flex justify-between items-center gap-[30px] sm:gap-0 flex-col sm:flex-row">
         <a href="/">
-          <img className="w-16" src="/src/assets/logo.svg" alt="logo-img" />
+          <img className="w-16" src={logo} alt="logo-img" />
         </a>
         <nav>
           <ul className="flex items-center gap-[50px]">

@@ -12,7 +12,7 @@ const TestimonialBox: React.FC<TestimonialBoxProps> = ({ name, image, desc, posi
       <p className="text-sm font-normal tracking-[0.8px] mb-[30px]">{desc}</p>
       <div className="flex items-center gap-[15px]">
         <img
-          src={`/src/assets/${image}`}
+          src={`${image}`}
           className="w-[50px] h-[50px] rounded-full object-contain"
           alt="img-profile"
         />

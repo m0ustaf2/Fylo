@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { FaTwitter, FaInstagram, FaFacebookF } from "react-icons/fa";
-
+import logo from "../assets/logo.svg"
+import location from "../assets/icon-location.svg"
+import phone from "../assets/icon-phone.svg"
+import email from "../assets/icon-email.svg"
 interface Contact {
   icon: string;
   text: string;
@@ -8,8 +11,8 @@ interface Contact {
 
 export default function Footer() {
   const [contact] = useState<Contact[]>([
-    { icon: "icon-phone.svg", text: "+01064734328" },
-    { icon: "icon-email.svg", text: "mostafaesmail838@gmail.com" },
+    { icon: `${phone}`, text: "+01064734328" },
+    { icon: `${email}`, text: "mostafaesmail838@gmail.com" },
   ]);
 
   const [links] = useState<string[]>([
@@ -28,12 +31,12 @@ export default function Footer() {
     <section className="bg-[#0c1524] pt-[320px] md:pt-[200px] pb-[100px] text-white">
       <div className="container">
         <a href="/">
-          <img src="/src/assets/logo.svg" alt="logo-img" />
+          <img src={logo} alt="logo-img" />
         </a>
         <div className="mt-[30px] flex justify-between flex-wrap flex-col md:flex-row gap-[30px]">
           <div className="flex items-start gap-[15px] w-[340px] max-w-full">
             <img
-              src="/src/assets/icon-location.svg"
+              src={location}
               alt="location-img"
               className="w-[18px] h-[18px] object-contain"
             />
@@ -50,7 +53,7 @@ export default function Footer() {
                 key={item.text}
               >
                 <img
-                  src={`/src/assets/${item.icon}`}
+                  src={`${item.icon}`}
                   alt="icon"
                   className="w-[18px] h-[18px] object-contain"
                 />

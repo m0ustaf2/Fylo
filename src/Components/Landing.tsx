@@ -1,3 +1,5 @@
+import bg1 from "../assets/illustration-intro.png"
+import wave from "../assets/bg-curvy-desktop.svg"
 export default function Landing() {
   return (
     <section className="bg-[#1c2230]">
@@ -6,7 +8,7 @@ export default function Landing() {
           <div className="w-[750px] max-w-full m-auto">
             <img
               className="w-full h-fit"
-              src="src/assets/illustration-intro.png"
+              src={bg1}
               alt="img"
             />
           </div>
@@ -33,7 +35,7 @@ export default function Landing() {
       </div>
       <div className="w-full h-[200px]">
         <img
-          src="/src/assets/bg-curvy-desktop.svg"
+          src={wave}
           alt="img"
           className="w-full h-full"
         />

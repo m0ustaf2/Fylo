@@ -1,3 +1,7 @@
+import bgQout from "../assets/bg-quotes.png"
+import profile1 from "../assets/profile-1.jpg"
+import profile2 from "../assets/profile-2.jpg"
+import profile3 from "../assets/profile-3.jpg"
 import { useState } from "react";
 import TestimonialBox from "./TestimonialBox";
 
@@ -14,21 +18,21 @@ function Testimonials() {
     {
       id: 1,
       dsc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptas, officia error odio fuga earum?",
-      image: "profile-1.jpg",
+      image: `${profile1}`,
       position: "Founder & CEO, Huddle",
       name: "Ahmed",
     },
     {
       id: 2,
       dsc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptas, officia error odio fuga earum?",
-      image: "profile-2.jpg",
+      image: `${profile2}`,
       position: "Founder & CEO, Huddle",
       name: "Ahmed",
     },
     {
       id: 3,
       dsc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptas, officia error odio fuga earum?",
-      image: "profile-3.jpg",
+      image: `${profile3}`,
       position: "Founder & CEO, Huddle",
       name: "Ahmed",
     },
@@ -38,7 +42,7 @@ function Testimonials() {
     <section className="pb-[350px]">
       <div className="container relative">
         <div className="absolute left-[20px] top-[-35px] -z-10">
-          <img src="/src/assets/bg-quotes.png" alt="quotes" />
+          <img src={bgQout} alt="quotes" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[40px]">
           {testData.map((item) => (

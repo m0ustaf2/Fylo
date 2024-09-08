@@ -1,9 +1,11 @@
+import stayImg from "../assets/illustration-stay-productive.png"
+import stayIcon from "../assets/icon-arrow.svg"
 function StayProductive() {
   return (
     <section className="mb-[150px]">
       <div className="container grid grid-cols-1 md:grid-cols-2 gap-[30px] place-items-center">
         <div>
-          <img src="/src/assets/illustration-stay-productive.png" alt="img" />
+          <img src={stayImg} alt="img" />
         </div>
         <div className="text-white">
           <h3 className="font-medium text-[35px] leading-[50px]">
@@ -29,7 +31,7 @@ function StayProductive() {
           >
             See hoe Fylo works
             <img
-              src="/src/assets/icon-arrow.svg"
+              src={stayIcon}
               alt="arrow-icon"
               className="w-[20px] h-[20px] object-contain animate-[moveRight_1s_ease-in-out_infinite]"
             />

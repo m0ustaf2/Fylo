@@ -8,7 +8,7 @@ const FeatureBox: React.FC<FeatureBoxProps> = ({ icon, title, desc }) => {
   return (
     <div className="text-white element-center flex-col text-center">
       <img
-        src={`/src/assets/${icon}`}
+        src={`${icon}`}
         alt="icon-img"
         className="w-[80px] h-[80px] object-contain"
       />
