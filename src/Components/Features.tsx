@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import FeatureBox from "./FeatureBox";
 
+interface FeatureItem {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
 function Features() {
-  const [items] = useState([
+  const [items] = useState<FeatureItem[]>([
     {
       icon: "icon-access-anywhere.svg",
-      title: "Access your files,anywhere",
+      title: "Access your files, anywhere",
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maiores, dolor velit debitis delectus distinctio!",
     },
     {
@@ -24,6 +30,7 @@ function Features() {
       desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti maiores, dolor velit debitis delectus distinctio!",
     },
   ]);
+
   return (
     <section className="pb-[150px]">
       <div className="container">

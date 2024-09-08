@@ -1,8 +1,16 @@
 import { useState } from "react";
 import TestimonialBox from "./TestimonialBox";
 
+interface TestimonialData {
+  id: number;
+  dsc: string;
+  image: string;
+  position: string;
+  name: string;
+}
+
 function Testimonials() {
-  const [testData] = useState([
+  const [testData] = useState<TestimonialData[]>([
     {
       id: 1,
       dsc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt voluptas, officia error odio fuga earum?",
@@ -25,6 +33,7 @@ function Testimonials() {
       name: "Ahmed",
     },
   ]);
+
   return (
     <section className="pb-[350px]">
       <div className="container relative">

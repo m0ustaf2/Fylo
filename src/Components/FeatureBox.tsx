@@ -1,6 +1,12 @@
 import React from "react";
 
-function FeatureBox({ icon, title, desc }) {
+interface FeatureBoxProps {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+const FeatureBox: React.FC<FeatureBoxProps> = ({ icon, title, desc }) => {
   return (
     <div className="text-white element-center flex-col text-center">
       <img
@@ -12,6 +18,6 @@ function FeatureBox({ icon, title, desc }) {
       <p className="font-normal text-sm">{desc}</p>
     </div>
   );
-}
+};
 
 export default FeatureBox;

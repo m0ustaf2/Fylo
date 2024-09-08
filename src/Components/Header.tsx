@@ -1,8 +1,10 @@
-import {useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Header() {
-  const [links] = useState(["Featurs", "Team", "SignIn"]);
-  const headerRef = useRef(null);
+  const [links] = useState<string[]>(["Features", "Team", "SignIn"]);
+
+  const headerRef = useRef<HTMLElement | null>(null);
+
   useEffect(() => {
     const handleScroll = () => {
       if (headerRef.current) {
@@ -15,8 +17,8 @@ export default function Header() {
         }
       }
     };
+
     window.addEventListener("scroll", handleScroll);
-    // Cleanup function to remove the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -25,9 +27,9 @@ export default function Header() {
   return (
     <header
       ref={headerRef}
-      className="pt-[50px] fixed top-0 w-full left-0 z-50  transition-all duration-200 "
+      className="pt-[50px] fixed top-0 w-full left-0 z-50 transition-all duration-200"
     >
-      <div className="container   flex justify-between items-center gap-[30px] sm:gap-0 flex-col sm:flex-row ">
+      <div className="container flex justify-between items-center gap-[30px] sm:gap-0 flex-col sm:flex-row">
         <a href="/">
           <img className="w-16" src="/src/assets/logo.svg" alt="logo-img" />
         </a>
@@ -36,8 +38,8 @@ export default function Header() {
             {links.map((link) => (
               <li key={link}>
                 <a
-                  className="text-white  opacity-[0.9] hover:opacity-[1] hover:underline hover:transition-opacity duration-200"
-                  href={`/${link.toLocaleLowerCase()}`}
+                  className="text-white opacity-[0.9] hover:opacity-[1] hover:underline hover:transition-opacity duration-200"
+                  href={`/${link.toLowerCase()}`}
                 >
                   {link}
                 </a>

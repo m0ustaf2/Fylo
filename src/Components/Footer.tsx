@@ -1,12 +1,18 @@
 import { useState } from "react";
-import {  FaTwitter, FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaTwitter, FaInstagram, FaFacebookF } from "react-icons/fa";
+
+interface Contact {
+  icon: string;
+  text: string;
+}
+
 export default function Footer() {
-  const [contact] = useState([
+  const [contact] = useState<Contact[]>([
     { icon: "icon-phone.svg", text: "+01064734328" },
     { icon: "icon-email.svg", text: "mostafaesmail838@gmail.com" },
   ]);
 
-  const [links] = useState([
+  const [links] = useState<string[]>([
     "About Us",
     "Contact Us",
     "Jobs",
@@ -15,14 +21,16 @@ export default function Footer() {
     "Privacy",
     "Blog",
   ]);
-  const [socialIcons] = useState(["facebook", "twitter", "instagram"]);
+
+  const [socialIcons] = useState<string[]>(["facebook", "twitter", "instagram"]);
+
   return (
     <section className="bg-[#0c1524] pt-[320px] md:pt-[200px] pb-[100px] text-white">
       <div className="container">
         <a href="/">
           <img src="/src/assets/logo.svg" alt="logo-img" />
         </a>
-        <div className="mt-[30px] flex justify-between flex-wrap  flex-col md:flex-row gap-[30px]">
+        <div className="mt-[30px] flex justify-between flex-wrap flex-col md:flex-row gap-[30px]">
           <div className="flex items-start gap-[15px] w-[340px] max-w-full">
             <img
               src="/src/assets/icon-location.svg"
@@ -33,12 +41,12 @@ export default function Footer() {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Labore
               facere ratione earum dolores laboriosam quo placeat sed alias
               nulla nobis!
-            </p>     
+            </p>
           </div>
           <div>
             {contact.map((item) => (
               <div
-                className="flex items-center gap-[15px] mb-[5px] last-of-type:mb-0 "
+                className="flex items-center gap-[15px] mb-[5px] last-of-type:mb-0"
                 key={item.text}
               >
                 <img
@@ -54,7 +62,7 @@ export default function Footer() {
             {links.map((link) => (
               <li key={link}>
                 <a
-                  href={`/${link.toLocaleLowerCase()}`}
+                  href={`/${link.toLowerCase()}`}
                   className="hover:text-primary transition-colors duration-200 text-base"
                 >
                   {link}
@@ -62,7 +70,6 @@ export default function Footer() {
               </li>
             ))}
           </ul>
-
           <ul className="flex gap-[15px] w-full justify-center md:w-auto">
             {socialIcons.map((icon) => (
               <li key={icon}>
@@ -71,9 +78,9 @@ export default function Footer() {
                     {icon === "facebook" ? (
                       <FaFacebookF className="group-hover:text-primary transition-all duration-200" />
                     ) : icon === "twitter" ? (
-                      <FaTwitter className="group-hover:text-primary transition-all duration-200"  />
+                      <FaTwitter className="group-hover:text-primary transition-all duration-200" />
                     ) : (
-                      <FaInstagram className="group-hover:text-primary transition-all duration-200"  />
+                      <FaInstagram className="group-hover:text-primary transition-all duration-200" />
                     )}
                   </div>
                 </a>
